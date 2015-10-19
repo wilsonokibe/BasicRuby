@@ -1,10 +1,10 @@
 class String
-  def result
-    self.is_palindrome? ? puts("#{self} is a palindrome") : puts("#{self} is not a palindrome")
+  def palindrome
+    puts is_palindrome? ? ("#{self} is a palindrome") : ("#{self} is not a palindrome")
     puts
   end
 
   def is_palindrome?
-    self == self.reverse
+    self == reverse
   end
 end

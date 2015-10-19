@@ -1,10 +1,12 @@
 require_relative "../lib/string.rb"
 
-puts "Input something and I'll tell you if it is palindrome or not: "
+message = "Input something and I'll tell you if it is palindrome or not: (enter q to quite)"
+
+puts message
 string = gets.chomp 
 
-while !string.match(/^q$/i) 
-  string.result 
-  puts "Input something and I'll tell you if it is palindrome or not: "  
+until string.match(/^q$/i) 
+  string.palindrome
+  puts message  
   string = gets.chomp 
 end 

@@ -1,8 +1,8 @@
 class Array
-  def group_array
+  def get_element_by_length
     hash_array = Hash.new {|hash, key| hash[key] = [] }
 
-    for element in self
+    each do |element| 
       key = element.to_s.length
       hash_array[key] << element
     end
