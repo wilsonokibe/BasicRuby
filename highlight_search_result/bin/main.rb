@@ -6,7 +6,7 @@ sentence = gets.chomp
 puts "Enter a search word"
 search_word = gets.chomp
 
-a, b = sentence.highlight_match(search_word)
+match_count, highlighted_sentence = sentence.highlight_match(search_word)
 
-puts "The match result is: \n#{b}"
-puts "There were #{a} matches"
+puts "The match result is: \n#{highlighted_sentence}"
+puts "There were #{match_count} matches"

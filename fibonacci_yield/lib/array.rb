@@ -1,5 +1,7 @@
 class Array
   def fibonacci
-    yield while self[-1] < 900
+    until self[-1] >= 1000
+      yield 
+    end
   end
 end

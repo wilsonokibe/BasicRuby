@@ -1,6 +1,6 @@
 class String
   def unify_case
-    downcase.frequency_counter
+    gsub!(/[^aA-zZ]/, '').downcase.frequency_counter
   end
 
   def frequency_counter

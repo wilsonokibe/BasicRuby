@@ -20,21 +20,11 @@ case Integer(transaction)
 when 1
   puts "Enter withdrawal amount:"
   amount = gets.chop
-  if amount.to_f < 0
-    puts "You cannot make negative transaction"
-  else
-    new_customer.withdraw(amount.to_f)
-    new_customer.balance
-  end
+  new_customer.withdraw(amount.to_f)
 when 2
   puts "Enter deposit amount:"
-  amount = gets.chop
-  if amount.to_f < 0
-    puts "You cannot make negative transaction"
-  else
-    new_customer.deposit(amount.to_f)
-    new_customer.balance
-  end
+  amount = gets.chop  
+  new_customer.deposit(amount.to_f)
 when 4 
   abort("Goodbye...")         
 end
