@@ -3,6 +3,7 @@ require_relative "../lib/string.rb"
 time1 = "23:23:52"
 time2 = "02:48:16"
 
-a = time1.sum_time(time2)
+time = String.new
+all_time = time.sum_digits(time1, time2)
 
-puts "sum of both time: #{a}"
+puts "\nsum of both time: #{all_time}\n\n"
