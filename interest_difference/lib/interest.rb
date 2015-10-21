@@ -1,6 +1,6 @@
 class Interest
   attr_writer :principal, :time
-  @@rate = 10.0
+  INTEREST_RATE = 10.0
 
   def initialize
     if block_given? 
@@ -16,11 +16,11 @@ class Interest
   end
 
   def simple_interest
-    interest_simple =  @principal * @time * (@@rate / 100) 
+    interest_simple =  @principal * @time * (INTEREST_RATE / 100) 
   end
 
   def compound_interest
-    interest_compound =  @principal * (((1 + (@@rate / 100)) ** @time) - 1)
+    interest_compound =  @principal * (((1 + (INTEREST_RATE / 100)) ** @time) - 1)
   end
 
   def interests_difference
