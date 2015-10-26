@@ -14,7 +14,7 @@ class Employee
   end
 
   def sort_by_designation(data)
-    data = data.sort_by! { |row| row[2] }
+    data.sort_by! { |row| row[2] }
   end
 
   def group_by_designation(data)
