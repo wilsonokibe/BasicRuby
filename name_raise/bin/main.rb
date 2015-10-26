@@ -8,9 +8,7 @@ begin
   lastname = gets.chomp
 
   name = Name.new(firstname, lastname)
-  puts "Your name is: " + name.names
-rescue RetryException => detail
-  # retry if detail.ok_to_retry
-  # raise
+  puts "Your name is: #{name.names}"
+rescue NameException => detail
   puts "#{detail.message}"
 end 
