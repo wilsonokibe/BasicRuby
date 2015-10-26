@@ -1,14 +1,14 @@
 require_relative '../lib/name_exception.rb'
 
 class Name
-  attr :firstname, :lastname
+  attr_reader :firstname, :lastname
 
   def initialize(firstname, lastname)
-    raise NameException.new(true), "Firstname cannot be blank" if firstname.empty?
+    raise NameException.new, "Firstname cannot be blank" if firstname.empty?
       
-    raise NameException.new(true), "Lastname cannot be blank" if lastname.empty?
+    raise NameException.new, "Lastname cannot be blank" if lastname.empty?
       
-    raise NameException.new(true), "Firstname must start with uppercase letter" if !firstname.match(/[A-Z].*/)
+    raise NameException.new, "Firstname must start with uppercase letter" if !firstname.match(/[A-Z].*/)
 
     @firstname = firstname
     @lastname  = lastname

@@ -1,2 +1,0 @@
-class NameException < StandardError
-end
