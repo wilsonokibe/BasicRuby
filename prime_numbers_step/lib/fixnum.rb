@@ -5,7 +5,7 @@ class Fixnum
     prime = []
 
     2.step(self) do |value|
-      value.prime? && prime << value
+      prime << value if value.prime?
     end
     prime
   end
