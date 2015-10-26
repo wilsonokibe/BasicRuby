@@ -1,11 +1,8 @@
 class Fixnum
   def calculate_factorial
     begin
-      if self < 0
-        raise "Invalid input for factorial" 
-      else
-        (2..self).inject(1) { |a, b| a * b }
-      end
+      raise "Invalid input for factorial"  if self < 0        
+      (2..self).inject(1) { |a, b| a * b }
     rescue Exception
       STDERR.puts "Invalid input error: #{$!}"
     end
