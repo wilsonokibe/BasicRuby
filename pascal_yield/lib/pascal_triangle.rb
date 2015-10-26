@@ -1,4 +1,4 @@
-require_relative '../lib/factorial.rb'
+require_relative '../lib/fixnum.rb'
 
 class PascalTriangle
   def pascal_triangle(number)
