@@ -22,17 +22,15 @@ class Employee
     data.each do |content| 
       hash[content[2]] << content[0..1]
     end
-    hash
+    hash = hash.each do |value1, value2|
+      value2.sort_by! { |row| row[1] }
+    end
   end
 
   def write_to_file(data)
     file = File.open("../lib/output", "w") do |file|
       data.each do |value1, value2|
-        if value2.length > 1
-          file.puts "#{value1}s" 
-        else
-          file.puts "#{value1}"
-        end
+        file.puts (value2.length > 1) ? "#{value1}s" : "#{value1}"        
         value2.each do |value|
           file.puts "#{value[0]} (EmpId: #{value[1]})"
         end
